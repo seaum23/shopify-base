@@ -28,7 +28,7 @@ Route::get('test', function(){
     var_dump(parse_url(config('app.url'))); 
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home.index')->middleware('shopify.merchant');
+Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/', [AuthController::class, 'index'])->name('app.install');
 Route::get('/authenticate', [AuthController::class, 'store'])->name('app.authenticate');

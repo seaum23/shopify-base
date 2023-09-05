@@ -16,8 +16,6 @@ class AuthController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(User::get());
-        exit;
         $request->validate([
             'shop'
         ]);
